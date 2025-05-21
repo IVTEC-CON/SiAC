@@ -107,18 +107,94 @@
       <li>Formulário de personalização incluso</li>
     </ul>
   </section>
-<button onclick="document.getElementById('formulario').style.display = 'block'">
-    ✍️ Abrir Formulário
-  </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulário de Contato</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #e9eef1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #formulario {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #2196F3;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #1976D2;
+    }
+
+    @media (max-width: 480px) {
+      #formulario {
+        padding: 20px;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
 
   <div id="formulario">
     <h3>Formulário de Contato</h3>
     <form action="https://formspree.io/f/seuID" method="POST">
-      <input type="text" name="nome" placeholder="Seu nome" required><br>
-      <input type="email" name="email" placeholder="Seu e-mail" required><br>
-      <textarea name="mensagem" placeholder="Sua mensagem" rows="4" required></textarea><br>
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
       <button type="submit">📤 Enviar</button>
     </form>
+  </div>
+
+</body>
+</html>
+
   <section>
     <h2>Fale connosco</h2>
     <p>Quer agendar uma demonstração ou tirar dúvidas? Entre em contacto via WhatsApp:</p>
